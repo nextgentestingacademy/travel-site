@@ -11,7 +11,7 @@ import utils.SmartLogger;
 
 public class HomePage extends BasePage {
 	// Page Factory element
-	@FindBy(css="newlocatoraddedonMain")
+	@FindBy(css=".dds-text-primary.dds-text-lg.dds-font-semibold.dds-overflow-hidden.dds-whitespace-normal.dds-line-clamp-1.dds-leading-relaxed")
 	WebElement imgLocation;
 	
 	@FindBy(xpath="//input[contains(@placeholder,'Search city')]")
