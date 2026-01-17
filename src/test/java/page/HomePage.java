@@ -48,6 +48,7 @@ public class HomePage extends BasePage {
 
 	// page specific methods
 	public void selectLocation(String city) throws InterruptedException {
+		Thread.sleep(5000);
 		click(imgLocation);
 		SmartLogger.info("Clicked on Search location");
 		clickUsingActions(edtSearchLocation);
