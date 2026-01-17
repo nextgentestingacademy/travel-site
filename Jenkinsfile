@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven-3.9.2'
-        jdk 'jdk17'
+        maven 'MAVEN'
+        jdk 'Java_JDK'
     }
 
     environment {
@@ -34,9 +34,12 @@ pipeline {
             steps {
                 junit 'target/surefire-reports/*.xml'
                 publishHTML([
-                       reportDir: 'test-output',
-                       reportFiles: 'ExtentReport.html',
-                       reportName: 'Extent Report'])
+                  allowMissing: true,
+                  alwaysLinkToLastBuild: true,
+                  keepAll: true,
+                  reportDir: 'test-output',
+                  reportFiles: 'ExtentReport.html',
+                  reportName: 'Extent Report'])
             }
         }
     }
