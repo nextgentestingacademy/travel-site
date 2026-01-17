@@ -20,13 +20,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean install -DskipTests'
+                bat 'mvn clean install -DskipTests'
             }
         }
 
         stage('Execute Tests') {
             steps {
-                sh "mvn test -Denv=$ENV"
+                bat "mvn test -Denv=$ENV"
             }
         }
 
